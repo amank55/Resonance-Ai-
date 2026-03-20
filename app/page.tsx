@@ -5,7 +5,7 @@ const page = () => {
   return (
     <>
     <div>
-      <Button size= "xs" onClick={()=> toast.success("Hello World")}>ClickMEsss</Button>
+      <Button size="lg" onClick={()=> toast.success("Hello World")}>ClickMEsss</Button>
     </div>
     </>
   )
