@@ -1,6 +1,8 @@
+"use client"
 import { PageHeader } from "@/components/page-header";
 import { DashboardHeader } from "../components/dashboard-header";
 import { HeroPattern } from "../components/hero-pattern";
+import { TextInputPanel } from "../components/text-input-panel";
 
 
 export function DashboardView() {
@@ -10,6 +12,7 @@ export function DashboardView() {
       <HeroPattern/>
      <div className="relative space-y-8 p-4 lg:p-16">
          <DashboardHeader/>
+         <TextInputPanel/>
      </div>
       </div>
   );
