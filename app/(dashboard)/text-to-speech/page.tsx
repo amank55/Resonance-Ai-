@@ -1,12 +1,14 @@
-import type { Metadata } from "next"
-export const metadata: Metadata = {
-    title: "Texttospeech",
-}
+import { TextToSpeechLayout } 
+from "@/features/text-to-speech/views/text-to-speech-layout";
 
-export default function TextToSpeech(){
-    return (
-        <div className="text-2xl font-bold">
-            TextTospeech
-        </div>
-    )
+export default function Layout({
+  children
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <TextToSpeechLayout>
+      {children}
+    </TextToSpeechLayout>
+  );
 }
