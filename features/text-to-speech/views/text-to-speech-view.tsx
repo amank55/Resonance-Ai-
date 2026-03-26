@@ -1,6 +1,6 @@
 "use client";
 
-import { TextInputPanel } from "@/features/text-to-speech/components/text-input-panel";
+import { TextInputPanel } from "../components/text-input-paanel";
 
 export function TextToSpeechView() {
   return (
