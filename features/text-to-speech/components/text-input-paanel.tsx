@@ -1,6 +1,9 @@
+"use client";
+
 import { Textarea } from "@/components/ui/textarea";
 import { TEXT_MAX_LENGTH } from "../data/constant";
 import { useState } from "react";
+
 export function TextInputPanel() {
     const [text, setText] = useState("")
   return (
