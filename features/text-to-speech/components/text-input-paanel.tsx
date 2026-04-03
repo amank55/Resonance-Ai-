@@ -3,6 +3,7 @@
 import { Textarea } from "@/components/ui/textarea";
 import { TEXT_MAX_LENGTH } from "../data/constant";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function TextInputPanel() {
     const [text, setText] = useState("")
@@ -20,8 +21,13 @@ export function TextInputPanel() {
           maxLength={TEXT_MAX_LENGTH}
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-linear-to-t from-background to-transparent">
+          </div>
         </div>
-      </div>
+          <div className="shrink-0 p-4 lg:p-6">
+            <div className="flex flex-col gap-3 lg:hidden">
+              <Button className="w-full">Generate Speech</Button>
+              </div>
+              </div>
     </div>
   );
 }
