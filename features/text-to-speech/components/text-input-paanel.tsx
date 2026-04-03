@@ -19,6 +19,8 @@ export function TextInputPanel() {
           focus-visible:ring-0"
           maxLength={TEXT_MAX_LENGTH}
         />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-linear-to-t from-background to-transparent">
+        </div>
       </div>
     </div>
   );
