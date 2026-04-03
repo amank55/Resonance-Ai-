@@ -4,9 +4,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { TEXT_MAX_LENGTH } from "../data/constant";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Badge, Coins } from "lucide-react";
 
 export function TextInputPanel() {
-    const [text, setText] = useState("")
+  const [text, setText] = useState("");
+
   return (
     <div className="flex h-full min-h-0 flex-col flex-1">
       <div className="relative min-h-0 flex-1">
@@ -21,13 +23,26 @@ export function TextInputPanel() {
           maxLength={TEXT_MAX_LENGTH}
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-linear-to-t from-background to-transparent">
-          </div>
         </div>
-          <div className="shrink-0 p-4 lg:p-6">
-            <div className="flex flex-col gap-3 lg:hidden">
-              <Button className="w-full">Generate Speech</Button>
+      </div>
+      <div className="shrink-0 p-4 lg:p-6">
+        <div className="flex flex-col gap-3 lg:hidden">
+          <Button className="w-full">Generate speech</Button>
+        </div>
+        {text.length > 0 ? (
+          <div className="hidden items-center justify-between lg:flex">
+            <Badge variant = "outline" className="gap-1.5 border-dashed">
+              <Coins className="size-3 text-chart-5"/>
+            </Badge>
+          </div>
+        ) : (
+          <div className="hidden lg:block">
+            <p className="text-sm text-muted-foreground">
+              Get started by typing or pasting text above
+            </p>
               </div>
-              </div>
+        )}
+      </div>
     </div>
   );
 }
