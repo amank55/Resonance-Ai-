@@ -1,10 +1,11 @@
 "use client";
 
 import { Textarea } from "@/components/ui/textarea";
-import { TEXT_MAX_LENGTH } from "../data/constant";
+import { TEXT_MAX_LENGTH , COST_PER_UNIT  } from "../data/constant";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge, Coins } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Coins } from "lucide-react";
 
 export function TextInputPanel() {
   const [text, setText] = useState("");
@@ -31,8 +32,13 @@ export function TextInputPanel() {
         </div>
         {text.length > 0 ? (
           <div className="hidden items-center justify-between lg:flex">
-            <Badge variant = "outline" className="gap-1.5 border-dashed">
+            <Badge variant="outline" className="gap-1.5 border-dashed">
               <Coins className="size-3 text-chart-5"/>
+              <span className="text-xs">
+                <span className="tabular-nums">
+                  ${(text.length * COST_PER_UNIT).toFixed(4)}
+                </span>
+              </span>
             </Badge>
           </div>
         ) : (
